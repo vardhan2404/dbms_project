@@ -3,6 +3,22 @@ import mysql.connector
 import pandas as pd
 import os
 
+new_folder_path = './image'
+
+if not os.path.exists(new_folder_path):
+    os.makedirs(new_folder_path)
+    print(f"Folder '{new_folder_path}' created successfully.")
+else:
+    print(f"Folder '{new_folder_path}' already exists.")
+
+new_folder_path = './video'
+
+if not os.path.exists(new_folder_path):
+    os.makedirs(new_folder_path)
+    print(f"Folder '{new_folder_path}' created successfully.")
+else:
+    print(f"Folder '{new_folder_path}' already exists.")
+
 conn = mysql.connector.connect(
     host="localhost",
     database="ott",
